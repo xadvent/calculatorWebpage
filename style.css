@@ -101,18 +101,18 @@ li, a {
     align-items: flex-end;
     margin-bottom: 23px;
 }
-.calcRight {
+#calcRight {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 9px;
-    margin-top: 0px;
+    margin-top: 10px;
     margin-left: 10px;
     margin-bottom: 2px;
 }
 
-#buttonList {
+#buttonList{
     flex-wrap: wrap;
     width: 230px;
     gap: 20px;

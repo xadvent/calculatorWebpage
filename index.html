@@ -20,9 +20,9 @@
         <div class="content">
             <div id="calcContainer">
                 <div id="screen">
-                    <div id="numberA" class="onScreen">a</div>
-                    <div id="operator" class="onScreen">+</div>
-                    <div id="numberB" class="onScreen">b</div>
+                    <div id="numberA" class="onScreen"></div>
+                    <div id="operator" class="onScreen"></div>
+                    <div id="numberB" class="onScreen"></div>
                 </div>
                 <div class="calcBottom">
                     <div class="calcLeft">
@@ -36,17 +36,20 @@
                             <li><button>4</button></li>
                             <li><button>3</button></li>
                             <li><button>2</button></li>
-                            <li><button>1</button></li> 
-                            <li><button>0</button></li> 
-                            <li><button id="clearButton">Clear</button></li>
+                            <li><button>1</button></li>
+                            <li><button>0</button></li>
+                            <li><button>Clear</button></li>
+                            <li class="plusMinus" onclick="makeNegative"><button>+/-</button></li>
                         </ul>
                     </div>
                     <div class="calcRight">
-                        <li><button>/</button></li> 
-                        <li><button>x</button></li> 
-                        <li><button>-</button></li> 
-                        <li><button>+</button></li> 
-                        <li><button>=</button></li> 
+                        <ul id="calcRight">
+                            <li><button>/</button></li> 
+                            <li><button>x</button></li> 
+                            <li><button>-</button></li> 
+                            <li><button>+</button></li> 
+                            <li><button>=</button></li> 
+                        </ul>
                     </div>
                 </div>
             </div>
