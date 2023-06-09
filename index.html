@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-    <script src="secondscript.js" defer></script>
+    <script src="script.js" defer></script>
     <title>Online Calculator</title>
 </head>
 <body>
@@ -14,28 +14,28 @@
             <div id="calcContainer">
                 <div id="calcGridContainer">
                     <div id="screen">
-                        <div id="numberA" class="onScreen">previous</div>
-                        <div id="numberB" class="onScreen">current</div>
+                        <div id="numberA" class="onScreen"></div>
+                        <div id="numberB" class="onScreen"></div>
                     </div>
                         <button class="clear spanning">Clear</button>
                         <button class="delete">Del</button>
                         <button class="operator">/</button>
-                        <button>7</button>
-                        <button>8</button>
-                        <button>9</button>
+                        <button class="numberButton">7</button>
+                        <button class="numberButton">8</button>
+                        <button class="numberButton">9</button>
                         <button class="operator">x</button>
-                        <button>4</button>
-                        <button>5</button>
-                        <button>6</button>
+                        <button class="numberButton">4</button>
+                        <button class="numberButton">5</button>
+                        <button class="numberButton">6</button>
                         <button class="operator">-</button>
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
+                        <button class="numberButton">1</button>
+                        <button class="numberButton">2</button>
+                        <button class="numberButton">3</button>
                         <button class="operator">+</button> 
                         <button class="colored" onclick="makeNegative">+/-</button>
-                        <button>0</button>
-                        <button class="operator">.</button> 
-                        <button class="operator">=</button>
+                        <button class="numberButton">0</button>
+                        <button class="dot">.</button> 
+                        <button class="equals colored">=</button>
                     </div>    
                 </div>
             </div>
