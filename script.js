@@ -11,6 +11,7 @@ String.prototype.replaceAll = function(str1, str2, ignore)
 } 
 
 
+
 const operate = function(a,operating,b){
     if (operating === '/' && (a === 0 || b ===0)) return alert('not allowed')
     switch(operating) {
@@ -28,8 +29,7 @@ const operate = function(a,operating,b){
             catch(err){numberA.textContent=b; numberB.textContent=''; operator.textContent=''}
     }
 }
-
-let check = false
+let check = false   // 'check' checks if values should be cleared before proceeding
    
 const numberButtons = document.querySelectorAll('.numberButton')
 const operatorButtons = document.querySelectorAll('.operator')
@@ -53,6 +53,11 @@ const appendNumber = function(bruh){
 
 const operatorFunction = function(thing){
     lastLetter = numberA.textContent.charAt(numberA.textContent.length -1)
+        if (numberB.textContent.includes('NaN') || numberB.textContent.includes('Infinity')){
+            numberB.textContent = '';
+            numberA.textContent = '';
+            return
+        }
         if ((numberA.textContent === '' && numberB.textContent === '') || numberB.textContent === '.') return;
         if (operatorButtonList.includes(lastLetter) && numberB.textContent === ''){
             numberA.textContent =' ' + numberA.textContent.slice(0, numberA.textContent.length-1) + ' ' + thing
@@ -146,7 +151,6 @@ dotButton.addEventListener('click', function(){
 
 window.addEventListener('keydown', (e)=>{
     let value = e.key
-    console.log(value)
     if (value>= 0 && value<=10){
         appendNumber(value)
     } else if (operatorButtonList.includes(value)) {
