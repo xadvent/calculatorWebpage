@@ -10,54 +10,39 @@
 </head>
 <body>
     <div class="page">
-        <div class="header">
-            <h1 class="title">Calculator: because mental math sucks</h1>
-            <ul>
-                <li><a href="https://github.com/xadvent/calculatorWebpage">GitHub</a></li>
-                <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">YouTube</a></li>
-            </ul>
-        </div>
         <div class="content">
             <div id="calcContainer">
-                <div id="screen">
-                    <div id="numberA" class="onScreen"></div>
-                    <div id="operator" class="onScreen"></div>
-                    <div id="numberB" class="onScreen"></div>
-                </div>
-                <div class="calcBottom">
-                    <div class="calcLeft">
-                    
-                        <ul id="buttonList">
-                            <li><button>9</button></li>
-                            <li><button>8</button></li>
-                            <li><button>7</button></li>
-                            <li><button>6</button></li>
-                            <li><button>5</button></li>
-                            <li><button>4</button></li>
-                            <li><button>3</button></li>
-                            <li><button>2</button></li>
-                            <li><button>1</button></li>
-                            <li><button>0</button></li>
-                            <li><button>Clear</button></li>
-                            <li onclick="makeNegative"><button>+/-</button></li>
-                        </ul>
+                <div id="calcGridContainer">
+                    <div id="screen">
+                        <div id="numberA" class="onScreen"></div>
+                        <div id="numberB" class="onScreen"></div>
                     </div>
-                    <div class="calcRight">
-                        <ul id="calcRight">
-                            <li><button>/</button></li> 
-                            <li><button>x</button></li> 
-                            <li><button>-</button></li> 
-                            <li><button>+</button></li> 
-                            <li><button>=</button></li> 
-                        </ul>
-                    </div>
+                        <button id="clear" class="spanning">Clear</button>
+                        <button id="delete">Del</button>
+                        <button class="operator">/</button>
+                        <button class="numberButton">7</button>
+                        <button class="numberButton">8</button>
+                        <button class="numberButton">9</button>
+                        <button class="operator">x</button>
+                        <button class="numberButton">4</button>
+                        <button class="numberButton">5</button>
+                        <button class="numberButton">6</button>
+                        <button class="operator">-</button>
+                        <button class="numberButton">1</button>
+                        <button class="numberButton">2</button>
+                        <button class="numberButton">3</button>
+                        <button class="operator">+</button> 
+                        <button class="colored" onclick="makeNegative()">+/-</button>
+                        <button class="numberButton">0</button>
+                        <button class="dot">.</button> 
+                        <button class="equals colored">=</button>
+                    </div>    
                 </div>
             </div>
         </div>
         <div class="footer">
-            Made by Pierce S. - 2023
+            <a href="https://github.com/xadvent/calculatorWebpage">Pierce S. - The Odin Project </a>
         </div>
     </div>
-    
 </body>
 </html>
