@@ -101,6 +101,13 @@ button:hover{
     transform:scale(0.95);
     font-size: 1.2rem;
 }
+#clear:hover,
+#delete:hover {
+    background-color: #fc9999;
+}
+.equals:hover {
+    background-color:#99fc9cc0
+}
 .operator,
 .colored {
     background-color: rgb(157, 161, 193);

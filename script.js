@@ -40,6 +40,7 @@ const dotButton = document.querySelector('.dot')
 
 
 const appendNumber = function(bruh){
+    if (numberB.textContent.length >= 25) {return}
     if (check === true){
         numberA.textContent = ''
         numberB.textContent = ''
