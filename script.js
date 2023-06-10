@@ -52,7 +52,7 @@ const appendNumber = function(bruh){
 
 const operatorFunction = function(thing){
     lastLetter = numberA.textContent.charAt(numberA.textContent.length -1)
-        if (numberA.textContent === '' && numberB.textContent === '') return;
+        if ((numberA.textContent === '' && numberB.textContent === '') || numberB.textContent === '.') return;
         if (operatorButtonList.includes(lastLetter) && numberB.textContent === ''){
             numberA.textContent =' ' + numberA.textContent.slice(0, numberA.textContent.length-1) + ' ' + thing
         } else if (lastLetter === '='){
@@ -92,6 +92,7 @@ const delFunction = function(){
 }
 
 const makeNegative = function(){
+    if (numberB.textContent === '.') return;
     if (numberA.textContent.charAt(numberA.textContent.length-1) === '='){
         numberA.textContent = ''
         return check = false
