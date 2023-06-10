@@ -94,8 +94,13 @@ button {
     border: 2px;
     box-shadow: 0 2px 2px #1F2937;
     font-size: 1.3rem;
+    transition: .25s;
 }
-
+button:hover{
+    background-color: rgba(173, 219, 255, 0.859);
+    transform:scale(0.95);
+    font-size: 1.2rem;
+}
 .operator,
 .colored {
     background-color: rgb(157, 161, 193);
