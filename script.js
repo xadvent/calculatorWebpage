@@ -33,6 +33,9 @@ let check = false
 const numberButtons = document.querySelectorAll('.numberButton')
 const operatorButtons = document.querySelectorAll('.operator')
 const equalsButton = document.querySelector('.equals')
+const clearButton = document.querySelector('#clear')
+const delButton = document.querySelector('#delete')
+const dotButton = document.querySelector('.dot')
 
 numberButtons.forEach(button =>{
     button.addEventListener('click', function(){
@@ -53,14 +56,14 @@ operatorButtons.forEach(button => {
     button.addEventListener('click', function(){
         lastLetter = numberA.textContent.charAt(numberA.textContent.length -1)
         if (operatorButtonList.includes(lastLetter) && numberB.textContent === ''){
-            numberA.textContent = numberA.textContent.slice(0, numberA.textContent.length-1) + this.textContent
+            numberA.textContent =' ' + numberA.textContent.slice(0, numberA.textContent.length-1) + ' ' + this.textContent
         } else if (lastLetter === '='){
-            numberA.textContent = numberB.textContent + this.textContent
+            numberA.textContent = numberB.textContent + ' ' + this.textContent
             numberB.textContent = ''
             return check = false
         } else{
-            numberA.textContent += numberB.textContent
-            numberA.textContent += this.textContent
+            numberA.textContent += ' ' + numberB.textContent
+            numberA.textContent += ' ' + this.textContent
             numberB.textContent = ''
         }
     })
@@ -72,12 +75,42 @@ equalsButton.addEventListener('click', function(){
         return
     }
     else{
-        numberA.textContent += numberB.textContent
+        numberA.textContent += ' ' + numberB.textContent
         numberB.textContent = ''
         cleaned = numberA.textContent;
         cleaned = cleaned.replaceAll('x', '*');
-        numberB.textContent = eval(cleaned);
-        numberA.textContent += ' =';
+        numberB.textContent = eval(cleaned); 
+        numberA.textContent += ' ='; 
         return check = true
+    }
+})
+
+clearButton.addEventListener('click', function(){
+    numberA.textContent = ''
+    numberB.textContent = ''
+    return check = false
+})
+
+delButton.addEventListener('click', function(){
+    numberB.textContent = numberB.textContent.slice(0, numberB.textContent.length-1)
+})
+
+const makeNegative = function(){
+    if (numberA.textContent.charAt(numberA.textContent.length-1) === '='){
+        numberA.textContent = ''
+        return check = false
+    }
+    if (numberB.textContent.charAt(0) != '-'){
+        numberB.textContent = '-' + numberB.textContent
+    } else {
+        numberB.textContent = numberB.textContent.slice(1)
+    }
+}
+
+dotButton.addEventListener('click', function(){
+    if (numberB.textContent.includes('.')){
+        return;
+    } else {
+        numberB.textContent += '.'
     }
 })
